@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190413165947956.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxNTgwOTg5,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190413170437908.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxNTgwOTg5,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190413171013592.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxNTgwOTg5,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-05-17T13:09:28.616Z">
+<meta property="og:updated_time" content="2019-05-17T13:13:06.092Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux上cx_oralce踩坑记 &#x2F;手动斜眼笑">
 <meta name="twitter:description" content="linux上python3使用cx_Oracle连接Oracle数据库步骤环境：centos7前言：python中连接oracle需要安装instantclient，不管是mac、win还是linux都需要。后续讲解怎么安装。 安装cx_Oracle1pip3 install cx_Oracle  安装完cx_Oracle后建立连接测试代码123456789def connect():	&amp;apos">
@@ -29,7 +29,7 @@
     <link rel="alternative" href="/atom.xml" title="技术成长的三两事" type="application/atom+xml">
   
   
-    <link rel="icon" href="/img/lino.jpg">
+    <link rel="icon" href="/img/bitbug_favicon.ico">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -171,6 +171,7 @@
 
 <pre><code>如果不出意外的话，会显示错误如下所示：</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conn = cxo.connect(<span class="string">'&#123;&#125;/&#123;&#125;@&#123;&#125;:&#123;&#125;/&#123;&#125;'</span>.format(user, password, host, port, db))</span><br><span class="line">cx_Oracle.DatabaseError: DPI<span class="number">-1047</span>: Cannot locate a <span class="number">64</span>-bit Oracle Client library: <span class="string">"libclntsh.so: cannot open shared object file: No such file or directory"</span>. See https://oracle.github.io/odpi/doc/installation.html<span class="comment">#linux for help</span></span><br></pre></td></tr></table></figure>
 
+<a id="more"></a>
 <p> <strong>这段报错提示汇总告诉我们缺少instantclient，安装instantclient插件，直接复制错误提示中的网址即可</strong><br><a href="https://oracle.github.io/odpi/doc/installation.html#linux" target="_blank" rel="noopener">转到错误代码中的网址</a>.</p>
 <p><img src="https://img-blog.csdnimg.cn/20190413165745669.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxNTgwOTg5,size_16,color_FFFFFF,t_70" alt="插件下载地址"><br>如图所示是官方提供的解决方案，就是要我们下载插件。然后点击下载地址如图所示：<br><img src="https://img-blog.csdnimg.cn/20190413165947956.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxNTgwOTg5,size_16,color_FFFFFF,t_70" alt="点击接受"></p>
 <h4 id="然后，选择自己想要的版本（我猜你不知道自己想要哪个版本，那就跟我选一样的吧）"><a href="#然后，选择自己想要的版本（我猜你不知道自己想要哪个版本，那就跟我选一样的吧）" class="headerlink" title="然后，选择自己想要的版本（我猜你不知道自己想要哪个版本，那就跟我选一样的吧）"></a>然后，选择自己想要的版本（我猜你不知道自己想要哪个版本，那就跟我选一样的吧）</h4><p><img src="https://img-blog.csdnimg.cn/20190413170437908.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxNTgwOTg5,size_16,color_FFFFFF,t_70" alt="版本选择"></p>

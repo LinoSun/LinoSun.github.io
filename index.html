@@ -19,7 +19,7 @@
     <link rel="alternative" href="/atom.xml" title="技术成长的三两事" type="application/atom+xml">
   
   
-    <link rel="icon" href="/img/lino.jpg">
+    <link rel="icon" href="/img/bitbug_favicon.ico">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -162,17 +162,9 @@
 <h4 id="安装完cx-Oracle后建立连接测试代码"><a href="#安装完cx-Oracle后建立连接测试代码" class="headerlink" title="安装完cx_Oracle后建立连接测试代码"></a>安装完cx_Oracle后建立连接测试代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def connect():</span><br><span class="line">	&apos;&apos;&apos;</span><br><span class="line">	user,password,host,port,db 依次对应 用户名、密码、主机、端口、服务名；</span><br><span class="line">	建立游标，执行一条sql语句测试是否成功</span><br><span class="line">	&apos;&apos;&apos;</span><br><span class="line">    conn = cxo.connect(&apos;&#123;&#125;/&#123;&#125;@&#123;&#125;:&#123;&#125;/&#123;&#125;&apos;.format(user, password, host, port, db))</span><br><span class="line">    cursor = conn.cursor()</span><br><span class="line">    cursor.execute(sql)</span><br><span class="line">    return cursor.fetchall()</span><br></pre></td></tr></table></figure>
 
 <pre><code>如果不出意外的话，会显示错误如下所示：</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conn = cxo.connect(<span class="string">'&#123;&#125;/&#123;&#125;@&#123;&#125;:&#123;&#125;/&#123;&#125;'</span>.format(user, password, host, port, db))</span><br><span class="line">cx_Oracle.DatabaseError: DPI<span class="number">-1047</span>: Cannot locate a <span class="number">64</span>-bit Oracle Client library: <span class="string">"libclntsh.so: cannot open shared object file: No such file or directory"</span>. See https://oracle.github.io/odpi/doc/installation.html<span class="comment">#linux for help</span></span><br></pre></td></tr></table></figure>
-
-<p> <strong>这段报错提示汇总告诉我们缺少instantclient，安装instantclient插件，直接复制错误提示中的网址即可</strong><br><a href="https://oracle.github.io/odpi/doc/installation.html#linux" target="_blank" rel="noopener">转到错误代码中的网址</a>.</p>
-<p><img src="https://img-blog.csdnimg.cn/20190413165745669.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxNTgwOTg5,size_16,color_FFFFFF,t_70" alt="插件下载地址"><br>如图所示是官方提供的解决方案，就是要我们下载插件。然后点击下载地址如图所示：<br><img src="https://img-blog.csdnimg.cn/20190413165947956.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxNTgwOTg5,size_16,color_FFFFFF,t_70" alt="点击接受"></p>
-<h4 id="然后，选择自己想要的版本（我猜你不知道自己想要哪个版本，那就跟我选一样的吧）"><a href="#然后，选择自己想要的版本（我猜你不知道自己想要哪个版本，那就跟我选一样的吧）" class="headerlink" title="然后，选择自己想要的版本（我猜你不知道自己想要哪个版本，那就跟我选一样的吧）"></a>然后，选择自己想要的版本（我猜你不知道自己想要哪个版本，那就跟我选一样的吧）</h4><p><img src="https://img-blog.csdnimg.cn/20190413170437908.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxNTgwOTg5,size_16,color_FFFFFF,t_70" alt="版本选择"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">然后到现在为止，如果你开始烦了，下面请接受更烦的，233....</span><br></pre></td></tr></table></figure>
-
-<h4 id="点击下载的链接后，甲骨文公司要放大招了，让你登录注册"><a href="#点击下载的链接后，甲骨文公司要放大招了，让你登录注册" class="headerlink" title="点击下载的链接后，甲骨文公司要放大招了，让你登录注册"></a>点击下载的链接后，甲骨文公司要放大招了，让你登录注册</h4><p><img src="https://img-blog.csdnimg.cn/20190413171013592.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxNTgwOTg5,size_16,color_FFFFFF,t_70" alt="点击注册"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">温馨提示：可以加群(912282745)找我要哦，备注信息要填上我就是想要个插件</span><br></pre></td></tr></table></figure>
-
-<p><strong>然后下载完之后按照第一张图提示的错误信息步骤去安装，最后完成安装。需要注意的是：根据官方给出的解决方案要注意改变插件的版本信息</strong></p>
-
+        
+          <a class="article-more-a" href="/2019/05/17/linux上cx-oralce踩坑记-手动斜眼笑/#more">more >></a>
+        
       
 
       
