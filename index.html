@@ -164,19 +164,9 @@
 <p>时间格式：分钟         小时         日期         月份        周           命令</p>
 <p>数字范围： 0-59        0-23        1-31        1-12        0-7         echo “hello” &gt;&gt; abc.log</p>
 <h5 id="特殊字符的含义"><a href="#特殊字符的含义" class="headerlink" title="特殊字符的含义"></a><strong>特殊字符的含义</strong></h5><p>*(星号)        代表任何时刻都接受。</p>
-<p>,(逗号)         代表分隔时段的意思。</p>
-<p>-(减号)        代表一段时间范围内。</p>
-<p>/n(斜线)      那个 n 代表数字，每隔 n 单位间隔。</p>
-<h2 id="链接-crontab命令详解参考"><a href="#链接-crontab命令详解参考" class="headerlink" title="链接: crontab命令详解参考"></a>链接: <a href="http://c.biancheng.net/view/1092.html" target="_blank" rel="noopener">crontab命令详解参考</a></h2><h3 id="定时任务执行python脚本不执行原因："><a href="#定时任务执行python脚本不执行原因：" class="headerlink" title="定时任务执行python脚本不执行原因："></a>定时任务执行python脚本不执行原因：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">30 8 * * * python3 /home/lino/xxx.py</span><br></pre></td></tr></table></figure>
-
-<p>单独执行定时任务时候没有问题，单独执行python脚本没有问题，此定时任务不执行原因是因为python路径要写绝对路径<br>首先在linux上执行命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">whereis python3</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://img-blog.csdnimg.cn/20190420143744616.png" alt="在这里插入图片描述"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">30 8 * * * /usr/local/bin/python3 /home/lino/xxx.py</span><br></pre></td></tr></table></figure>
-
-<p>这样便解决了不执行原因</p>
-
+        
+          <a class="article-more-a" href="/2019/05/19/定时任务/#more">more >></a>
+        
       
 
       
