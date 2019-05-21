@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://LinoSun.github.io">
-  <title>Archives: 2019/5 | 技术成长的三两事</title>
+  <title>虚拟环境的安装 | 技术成长的三两事</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="技术成长的三两事">
-<meta property="og:url" content="https://LinoSun.github.io/archives/2019/05/index.html">
+  <meta name="description" content="Mac上的虚拟环境安装与管理首先需要了解在终端一下几条命令的区别1234which		查看可执行文件的位置 whereis 	查看文件的位置 locate     	配合数据库查看文件位置 find		实际搜寻硬盘查询文件名称  在了解这些命令的区别后，开始进入正题：">
+<meta name="keywords" content="Mac,虚拟环境">
+<meta property="og:type" content="article">
+<meta property="og:title" content="虚拟环境的安装">
+<meta property="og:url" content="https://LinoSun.github.io/2019/05/21/虚拟环境的安装/index.html">
 <meta property="og:site_name" content="技术成长的三两事">
+<meta property="og:description" content="Mac上的虚拟环境安装与管理首先需要了解在终端一下几条命令的区别1234which		查看可执行文件的位置 whereis 	查看文件的位置 locate     	配合数据库查看文件位置 find		实际搜寻硬盘查询文件名称  在了解这些命令的区别后，开始进入正题：">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-21T11:04:51.257Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="技术成长的三两事">
+<meta name="twitter:title" content="虚拟环境的安装">
+<meta name="twitter:description" content="Mac上的虚拟环境安装与管理首先需要了解在终端一下几条命令的区别1234which		查看可执行文件的位置 whereis 	查看文件的位置 locate     	配合数据库查看文件位置 find		实际搜寻硬盘查询文件名称  在了解这些命令的区别后，开始进入正题：">
   
     <link rel="alternative" href="/atom.xml" title="技术成长的三两事" type="application/atom+xml">
   
@@ -134,36 +139,86 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-虚拟环境的安装" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/21/虚拟环境的安装/" class="archive-article-date">
-  	<time datetime="2019-05-21T07:45:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-21</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/21/虚拟环境的安装/">虚拟环境的安装</a>
+    <h1 class="article-title" itemprop="name">
+      虚拟环境的安装
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/05/21/虚拟环境的安装/" class="archive-article-date">
+  	<time datetime="2019-05-21T07:45:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Mac上的虚拟环境安装与管理"><a href="#Mac上的虚拟环境安装与管理" class="headerlink" title="Mac上的虚拟环境安装与管理"></a>Mac上的虚拟环境安装与管理</h3><h5 id="首先需要了解在终端一下几条命令的区别"><a href="#首先需要了解在终端一下几条命令的区别" class="headerlink" title="首先需要了解在终端一下几条命令的区别"></a>首先需要了解在终端一下几条命令的区别</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">which		查看可执行文件的位置 </span><br><span class="line">whereis 	查看文件的位置 </span><br><span class="line">locate     	配合数据库查看文件位置 </span><br><span class="line">find		实际搜寻硬盘查询文件名称</span><br></pre></td></tr></table></figure>
+
+<p>在了解这些命令的区别后，开始进入正题：</p>
+<a id="more"></a>
+
+<h5 id="安装virtualenv（虚拟环境）和virtualenvwrapper（虚拟环境管理器）："><a href="#安装virtualenv（虚拟环境）和virtualenvwrapper（虚拟环境管理器）：" class="headerlink" title="安装virtualenv（虚拟环境）和virtualenvwrapper（虚拟环境管理器）："></a>安装virtualenv（虚拟环境）和virtualenvwrapper（虚拟环境管理器）：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo pip install virtualenv</span><br><span class="line">sudo pip install virtualenvwrapper</span><br></pre></td></tr></table></figure>
+
+<p>安装好之后要配置一下环境变量：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">~/.bash_profile 	是交互式、login 方式进入 bash 运行的</span><br><span class="line">~/.bashrc 			是交互式 non-login 方式进入 bash 运行的通常二者设置大致相同，所以通常前者会调用后者。所以一般优先把变量设置在.bashrc里面。比如在crontab里面执行一个命令，.bashrc设置的环境变量会生效，而.bash_profile不会</span><br><span class="line">/etc/prifile	  	全局环境变量，一般不操作</span><br></pre></td></tr></table></figure>
+
+<p>我们选择配置在~/bash_profile下</p>
+<p>然后再创建虚拟环境存放目录：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir ~/env_workspaces # 自定义名称，位置</span><br></pre></td></tr></table></figure>
+
+<p>在环境变量中添加配置信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.bash_profile</span><br></pre></td></tr></table></figure>
+
+<p>配置信息内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export WORKON_HOME=~/env_workspaces  # 加入自己设定的所有虚拟环境的工作空间</span><br><span class="line">source /usr/local/bin/virtualenvwrapper.sh  # 添加要激活的文件路径</span><br><span class="line">export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python  # 设置默认的python版本</span><br></pre></td></tr></table></figure>
+
+<p>这样便就成功了，source一下就可以了。</p>
+<h5 id="虚拟环境常用命令："><a href="#虚拟环境常用命令：" class="headerlink" title="虚拟环境常用命令："></a>虚拟环境常用命令：</h5><p>创建环境：mkvirtualenv xxx</p>
+<p>删除环境：rmvirtual xxx</p>
+<p>切换环境：workon xxx</p>
+<p>退出环境：deactivate</p>
+<p>列出所有环境：lsvirtualenv -b</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>给我家小可爱买哈根达斯<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wechat.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -179,183 +234,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://LinoSun.github.io/2019/05/21/虚拟环境的安装/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/19/定时任务/" class="archive-article-date">
-  	<time datetime="2019-05-19T13:23:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-19</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/05/19/定时任务/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">定时任务</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/19/定时任务/">定时任务</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">服务器</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">定时任务</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/19/linux上cx-oralce踩坑记/" class="archive-article-date">
-  	<time datetime="2019-05-19T13:14:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/19/linux上cx-oralce踩坑记/">linux上cx-oralce踩坑记</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">cx_oracle</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/19/ngnix的配置详解/" class="archive-article-date">
-  	<time datetime="2019-05-19T12:21:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/19/ngnix的配置详解/">ngnix的配置详解</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">服务器</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">nginx</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/17/Something-for-nothing/" class="archive-article-date">
-  	<time datetime="2019-05-17T13:59:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/17/Something-for-nothing/">Something for nothing</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -378,8 +356,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
