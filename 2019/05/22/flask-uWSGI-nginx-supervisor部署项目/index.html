@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="https://LinoSun.github.io">
   <title>flask+uWSGI+nginx+supervisor部署项目 | 技术成长的三两事</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="flask项目部署环境：centos7 工具：uWSGI, gunicorn, nginx, supervisor 前提：在服务器上安装虚拟环境不再叙述，以下所有操作都是在一个环境中运行的（虚拟环境没有权限区别），可以选择虚拟环境或者真实环境，在选择本机环境时要注意python以及pip的版本 1.安装uWSGI1pip install uswgi  配置，在项目目录下新建config.ini，在">
+  <meta name="description" content="flask项目部署环境：centos7 工具：uWSGI,  nginx, supervisor 前提：在服务器上安装虚拟环境不再叙述，以下所有操作都是在一个环境中运行的（虚拟环境没有权限区别），可以选择虚拟环境或者真实环境，在选择本机环境时要注意python以及pip的版本 1.安装uWSGI1pip install uswgi  配置，在项目目录下新建config.ini，在config.in">
 <meta name="keywords" content="服务器,uWSGI,supervisor">
 <meta property="og:type" content="article">
 <meta property="og:title" content="flask+uWSGI+nginx+supervisor部署项目">
 <meta property="og:url" content="https://LinoSun.github.io/2019/05/22/flask-uWSGI-nginx-supervisor部署项目/index.html">
 <meta property="og:site_name" content="技术成长的三两事">
-<meta property="og:description" content="flask项目部署环境：centos7 工具：uWSGI, gunicorn, nginx, supervisor 前提：在服务器上安装虚拟环境不再叙述，以下所有操作都是在一个环境中运行的（虚拟环境没有权限区别），可以选择虚拟环境或者真实环境，在选择本机环境时要注意python以及pip的版本 1.安装uWSGI1pip install uswgi  配置，在项目目录下新建config.ini，在">
+<meta property="og:description" content="flask项目部署环境：centos7 工具：uWSGI,  nginx, supervisor 前提：在服务器上安装虚拟环境不再叙述，以下所有操作都是在一个环境中运行的（虚拟环境没有权限区别），可以选择虚拟环境或者真实环境，在选择本机环境时要注意python以及pip的版本 1.安装uWSGI1pip install uswgi  配置，在项目目录下新建config.ini，在config.in">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://prsas2xjq.bkt.clouddn.com/%E6%B5%81%E7%A8%8B%E5%9B%BE.png">
-<meta property="og:updated_time" content="2019-05-22T14:59:06.374Z">
+<meta property="og:updated_time" content="2019-05-22T15:02:35.740Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="flask+uWSGI+nginx+supervisor部署项目">
-<meta name="twitter:description" content="flask项目部署环境：centos7 工具：uWSGI, gunicorn, nginx, supervisor 前提：在服务器上安装虚拟环境不再叙述，以下所有操作都是在一个环境中运行的（虚拟环境没有权限区别），可以选择虚拟环境或者真实环境，在选择本机环境时要注意python以及pip的版本 1.安装uWSGI1pip install uswgi  配置，在项目目录下新建config.ini，在">
+<meta name="twitter:description" content="flask项目部署环境：centos7 工具：uWSGI,  nginx, supervisor 前提：在服务器上安装虚拟环境不再叙述，以下所有操作都是在一个环境中运行的（虚拟环境没有权限区别），可以选择虚拟环境或者真实环境，在选择本机环境时要注意python以及pip的版本 1.安装uWSGI1pip install uswgi  配置，在项目目录下新建config.ini，在config.in">
 <meta name="twitter:image" content="http://prsas2xjq.bkt.clouddn.com/%E6%B5%81%E7%A8%8B%E5%9B%BE.png">
   
     <link rel="alternative" href="/atom.xml" title="技术成长的三两事" type="application/atom+xml">
@@ -162,7 +162,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="flask项目部署"><a href="#flask项目部署" class="headerlink" title="flask项目部署"></a>flask项目部署</h3><p>环境：centos7</p>
-<p>工具：uWSGI, gunicorn, nginx, supervisor</p>
+<p>工具：uWSGI,  nginx, supervisor</p>
 <p>前提：在服务器上安装虚拟环境不再叙述，以下所有操作都是在一个环境中运行的（虚拟环境没有权限区别），可以选择虚拟环境或者真实环境，在选择本机环境时要注意python以及pip的版本</p>
 <h4 id="1-安装uWSGI"><a href="#1-安装uWSGI" class="headerlink" title="1.安装uWSGI"></a>1.安装uWSGI</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install uswgi</span><br></pre></td></tr></table></figure>
 
