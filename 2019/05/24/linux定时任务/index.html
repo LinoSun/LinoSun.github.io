@@ -165,20 +165,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="linux定时任务执行python脚本失败原因"><a href="#linux定时任务执行python脚本失败原因" class="headerlink" title="linux定时任务执行python脚本失败原因"></a>linux定时任务执行python脚本失败原因</h2><p>环境：centos7 python3</p>
-<h3 id="定时任务详解"><a href="#定时任务详解" class="headerlink" title="定时任务详解"></a>定时任务详解</h3><h5 id="crontab-命令"><a href="#crontab-命令" class="headerlink" title="crontab 命令"></a>crontab 命令</h5><p>-u ：只有 root 才有权限执行这个任务，也就是帮其他使用者创建/移除 crontab 定时任务</p>
+        <h2><span id="linux定时任务执行python脚本失败原因">linux定时任务执行python脚本失败原因</span></h2><p>环境：centos7 python3</p>
+<h3><span id="定时任务详解">定时任务详解</span></h3><h5><span id="crontab-命令">crontab 命令</span></h5><p>-u ：只有 root 才有权限执行这个任务，也就是帮其他使用者创建/移除 crontab 定时任务</p>
 <p>-e ：编辑 crontab 的内容</p>
 <p>-l  ：显示 crontab 的内容</p>
 <p>-r ：移除所有 crontab 的内容，若仅要移除某一项，请用 -e 编辑</p>
 <p>时间格式：分钟         小时         日期         月份        周           命令</p>
 <p>数字范围： 0-59        0-23        1-31        1-12        0-7         echo “hello” &gt;&gt; abc.log</p>
-<h5 id="特殊字符的含义"><a href="#特殊字符的含义" class="headerlink" title="特殊字符的含义"></a><strong>特殊字符的含义</strong></h5><a id="more"></a>
+<h5><span id="特殊字符的含义"><strong>特殊字符的含义</strong></span></h5><a id="more"></a>
 
 <p>*(星号)        代表任何时刻都接受。</p>
 <p>,(逗号)         代表分隔时段的意思。</p>
 <p>-(减号)        代表一段时间范围内。</p>
 <p>/n(斜线)      那个 n 代表数字，每隔 n 单位间隔。</p>
-<h2 id="链接-crontab命令详解参考"><a href="#链接-crontab命令详解参考" class="headerlink" title="链接: crontab命令详解参考"></a>链接: <a href="https://segmentfault.com/a/1190000002628040" target="_blank" rel="noopener">crontab命令详解参考</a></h2><h3 id="定时任务执行python脚本不执行原因："><a href="#定时任务执行python脚本不执行原因：" class="headerlink" title="定时任务执行python脚本不执行原因："></a>定时任务执行python脚本不执行原因：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">30 8 * * * python3 /home/lino/xxx.py</span><br></pre></td></tr></table></figure>
+<h2><span id="链接-crontab命令详解参考">链接: </span></h2><h3><span id="定时任务执行python脚本不执行原因">定时任务执行python脚本不执行原因：</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">30 8 * * * python3 /home/lino/xxx.py</span><br></pre></td></tr></table></figure>
 
 <p>单独执行定时任务时候没有问题，单独执行python脚本没有问题，此定时任务不执行原因是因为python路径要写绝对路径<br>首先在linux上执行命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">whereis python3</span><br></pre></td></tr></table></figure>
@@ -441,6 +441,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">cx_oracle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">定时任务</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">服务器</a>
               </li>
              
@@ -453,19 +465,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">cx_oracle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">nginx</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">定时任务</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -165,10 +165,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="flask项目部署"><a href="#flask项目部署" class="headerlink" title="flask项目部署"></a>flask项目部署</h3><p>环境：centos7</p>
+        <h3><span id="flask项目部署">flask项目部署</span></h3><p>环境：centos7</p>
 <p>工具：uWSGI,  nginx, supervisor</p>
 <p>前提：在服务器上安装虚拟环境不再叙述，以下所有操作都是在一个环境中运行的（虚拟环境没有权限区别），可以选择虚拟环境或者真实环境，在选择本机环境时要注意python以及pip的版本</p>
-<h4 id="1-安装uWSGI"><a href="#1-安装uWSGI" class="headerlink" title="1.安装uWSGI"></a>1.安装uWSGI</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install uswgi</span><br></pre></td></tr></table></figure>
+<h4><span id="1安装uwsgi">1.安装uWSGI</span></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install uswgi</span><br></pre></td></tr></table></figure>
 
 <p>配置，在项目目录下新建<code>config.ini</code>，在<code>config.ini</code>中输入以下内容：</p>
 <a id="more"></a>
@@ -178,7 +178,7 @@
 <p>运行uwsgi：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(venv)my_flask root$ uwsgi config.ini</span><br><span class="line"></span><br><span class="line">[uWSGI] getting INI configuration from config.ini</span><br><span class="line"></span><br><span class="line">*** Starting uWSGI 2.0.8 (64bit) on [Fri Dec 19 14:34:11 2014] ***</span><br><span class="line">// 此处略去那些无用的启动信息 </span><br><span class="line">*** Stats server enabled on 127.0.0.1:9191 fd: 15 ***</span><br></pre></td></tr></table></figure>
 
-<h4 id="2-安装supervisor（进程守护）"><a href="#2-安装supervisor（进程守护）" class="headerlink" title="2.安装supervisor（进程守护）"></a>2.安装supervisor（进程守护）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install supervisor</span><br></pre></td></tr></table></figure>
+<h4><span id="2安装supervisor进程守护">2.安装supervisor（进程守护）</span></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install supervisor</span><br></pre></td></tr></table></figure>
 
 <p>配置文件放在/etc/supervisord.d/目录下新建一个配置文件如：test.ini（ini后缀文件），这个文件会在/etc/supervisord.conf下加载，test.ini内容如下所示：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[program:helloworld]  ;程序的名称</span><br><span class="line">command = /home/www/my_flask/venv/bin/uwsgi /home/www/my_flask/config.ini ;前半部分是uwsgi命令绝对路径，后半部分是执行配置文件绝对路径</span><br><span class="line">directory = /root/www/myflask ;命令执行的目录，是指在哪个目录下执行上面的命令</span><br><span class="line">user = root  ;执行进程的用户</span><br><span class="line">stopsignal = INT  </span><br><span class="line">autostart = true  ;是否自动启动</span><br><span class="line">autorestart = true  ;是否自动重启</span><br><span class="line">startsecs = 1  ;自动重启间隔</span><br><span class="line">stderr_logfile = /var/log/helloworld.err.log  ;标准错误日志</span><br><span class="line">stdout_logfile = /var/log/helloworld.out.log  ;标准输出日志</span><br></pre></td></tr></table></figure>
@@ -186,11 +186,11 @@
 <p><strong>supervisor相关命令</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">supervisord -c /etc/supervisor.conf 启动</span><br><span class="line"></span><br><span class="line">supervisorctl reload 	重启</span><br><span class="line"></span><br><span class="line">supervisorctl reread	热重启</span><br><span class="line">	supervisorctl update	</span><br><span class="line"></span><br><span class="line">supervisorctl shutdown #关闭所有任务</span><br><span class="line"></span><br><span class="line">supervisorctl stop|start program_name</span><br><span class="line"></span><br><span class="line">supervisorctl status #查看所有任务状态</span><br></pre></td></tr></table></figure>
 
-<h4 id="3-配置nginx"><a href="#3-配置nginx" class="headerlink" title="3.配置nginx"></a>3.配置nginx</h4><p>在/etc/nginx/conf.d/目录下新建一个.conf结尾的文件，配置如下所示：</p>
+<h4><span id="3配置nginx">3.配置nginx</span></h4><p>在/etc/nginx/conf.d/目录下新建一个.conf结尾的文件，配置如下所示：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">     listen  80;</span><br><span class="line">     server_name XXX.XXX.XXX; #公网地址</span><br><span class="line">   </span><br><span class="line">     location / &#123;</span><br><span class="line">       include      uwsgi_params;</span><br><span class="line">       uwsgi_pass   127.0.0.1:8001;  # 指向uwsgi 所应用的内部地址,所有请求将转发给uwsgi 处理；如果是云服务器失败的话，建议私网ip</span><br><span class="line">       uwsgi_param UWSGI_PYHOME /home/www/my_flask/venv; # 指向虚拟环境目录</span><br><span class="line">       uwsgi_param UWSGI_CHDIR  /home/www/my_flask; # 指向网站根目录</span><br><span class="line">       uwsgi_param UWSGI_SCRIPT manage:app; # 指定启动程序，manage是程序主入口，如manage.py，app是实例化的名字</span><br><span class="line">     &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
 
 <p>配置完了之后重启nginx即可，便可完成配置</p>
-<h4 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h4><p><strong>请求访问整个流程如图所示</strong>：</p>
+<h4><span id="总结">总结：</span></h4><p><strong>请求访问整个流程如图所示</strong>：</p>
 <p><img src="http://prsas2xjq.bkt.clouddn.com/%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="流程图"></p>
 <hr>
 <p>相关链接：</p>
@@ -455,6 +455,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">cx_oracle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">定时任务</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">服务器</a>
               </li>
              
@@ -467,19 +479,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">cx_oracle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">nginx</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">定时任务</a>
               </li>
              
               <li class="article-tag-list-item">

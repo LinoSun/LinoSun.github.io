@@ -163,11 +163,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="nginx常用命令"><a href="#nginx常用命令" class="headerlink" title="nginx常用命令"></a>nginx常用命令</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost conf]# nginx -?</span><br><span class="line">语法：nginx [选项]</span><br><span class="line">选项:</span><br><span class="line">  -?,-h         查看帮助信息。</span><br><span class="line">  -v            查看NGINX版本。</span><br><span class="line">  -V            查看NGINX版本及编译参数。</span><br><span class="line">  -t            测试配置文件是否配置正确。</span><br><span class="line">  -T            测试配置文件是否配置正确，并打印配置文件内容。</span><br><span class="line">  -q            在配置测试期间禁止非错误消息，由于NGINX命令执行时标准错误输出信息，所以这里的意思是</span><br><span class="line">                禁止显示错误信息。</span><br><span class="line">  -s signal     服务管理，控制NGINX服务的启动、停止等操作，操作信号有：</span><br><span class="line">                                              - stop      快速停止服务</span><br><span class="line">                                              - quit      优雅的停止服务</span><br><span class="line">                                              - reopen    重新打开日志文件</span><br><span class="line">                                              - reload    重新加载配置文件</span><br><span class="line">  -p prefix     设置NGINX主工作目录路径，默认为/usr/local/nginx。</span><br><span class="line">  -c filename   设置NGINX主配置文件路径，默认为/usr/local/nginx/conf/nginx.conf。</span><br><span class="line">  -g directives 设置配置文件中的全局指令，配置文件中的全局指令在命令行中的使用。</span><br><span class="line">示例：</span><br><span class="line">[root@localhost conf]# nginx                                =&gt; 启动NGINX服务</span><br><span class="line">[root@localhost conf]# nginx -s stop                        =&gt; 停止NGINX服务</span><br><span class="line">[root@localhost conf]# nginx -s reload                      =&gt; 重载NGINX配置</span><br><span class="line">[root@localhost conf]# nginx -t                             =&gt; 测试NGINX配置文件是否正确</span><br></pre></td></tr></table></figure>
+        <h5><span id="nginx常用命令">nginx常用命令</span></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost conf]# nginx -?</span><br><span class="line">语法：nginx [选项]</span><br><span class="line">选项:</span><br><span class="line">  -?,-h         查看帮助信息。</span><br><span class="line">  -v            查看NGINX版本。</span><br><span class="line">  -V            查看NGINX版本及编译参数。</span><br><span class="line">  -t            测试配置文件是否配置正确。</span><br><span class="line">  -T            测试配置文件是否配置正确，并打印配置文件内容。</span><br><span class="line">  -q            在配置测试期间禁止非错误消息，由于NGINX命令执行时标准错误输出信息，所以这里的意思是</span><br><span class="line">                禁止显示错误信息。</span><br><span class="line">  -s signal     服务管理，控制NGINX服务的启动、停止等操作，操作信号有：</span><br><span class="line">                                              - stop      快速停止服务</span><br><span class="line">                                              - quit      优雅的停止服务</span><br><span class="line">                                              - reopen    重新打开日志文件</span><br><span class="line">                                              - reload    重新加载配置文件</span><br><span class="line">  -p prefix     设置NGINX主工作目录路径，默认为/usr/local/nginx。</span><br><span class="line">  -c filename   设置NGINX主配置文件路径，默认为/usr/local/nginx/conf/nginx.conf。</span><br><span class="line">  -g directives 设置配置文件中的全局指令，配置文件中的全局指令在命令行中的使用。</span><br><span class="line">示例：</span><br><span class="line">[root@localhost conf]# nginx                                =&gt; 启动NGINX服务</span><br><span class="line">[root@localhost conf]# nginx -s stop                        =&gt; 停止NGINX服务</span><br><span class="line">[root@localhost conf]# nginx -s reload                      =&gt; 重载NGINX配置</span><br><span class="line">[root@localhost conf]# nginx -t                             =&gt; 测试NGINX配置文件是否正确</span><br></pre></td></tr></table></figure>
 
 <a id="more"></a>
 
-<h5 id="nginx配置文件详解"><a href="#nginx配置文件详解" class="headerlink" title="nginx配置文件详解"></a>nginx配置文件详解</h5><p>环境centos7，我的nginx.conf配置文件是在/etc/nginx/nginx.conf下，文件结构目录如下：</p>
+<h5><span id="nginx配置文件详解">nginx配置文件详解</span></h5><p>环境centos7，我的nginx.conf配置文件是在/etc/nginx/nginx.conf下，文件结构目录如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">...              #全局块</span><br><span class="line"></span><br><span class="line">events &#123;         #events块</span><br><span class="line">   ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http      #http块</span><br><span class="line">&#123;</span><br><span class="line">    ...   #http全局块</span><br><span class="line">    server        #server块</span><br><span class="line">    &#123; </span><br><span class="line">        ...       #server全局块</span><br><span class="line">        location [PATTERN]   #location块</span><br><span class="line">        &#123;</span><br><span class="line">            ...</span><br><span class="line">        &#125;</span><br><span class="line">        location [PATTERN] </span><br><span class="line">        &#123;</span><br><span class="line">            ...</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    server</span><br><span class="line">    &#123;</span><br><span class="line">      ...</span><br><span class="line">    &#125;</span><br><span class="line">    ...     #http全局块</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>1、全局块：配置影响nginx全局的指令。一般有运行nginx服务器的用户组，nginx进程pid存放路径，日志存放路径，配置文件引入，允许生成worker process数等。</p>
@@ -430,6 +430,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">cx_oracle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">定时任务</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">服务器</a>
               </li>
              
@@ -442,19 +454,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">cx_oracle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">nginx</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">定时任务</a>
               </li>
              
               <li class="article-tag-list-item">
