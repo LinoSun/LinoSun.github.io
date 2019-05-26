@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://LinoSun.github.io">
   <title>温故知新 | 技术成长的三两事</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="[TOC] 前言：项目中总会有新的知识点出现，所以本篇笔记当做字典来用，方便查询知识点">
+  <meta name="description" content="前言：项目中总会有新的知识点出现，所以本篇笔记当做字典来用，方便查询知识点 概览：1.杂七杂八外部库1.1 python中最假的库：Faker（伪造数据生成器）​    随机生成地址、姓名、银行卡号等等">
 <meta name="keywords" content="python,web">
 <meta property="og:type" content="article">
 <meta property="og:title" content="温故知新">
 <meta property="og:url" content="https://LinoSun.github.io/2019/05/26/温故知新/index.html">
 <meta property="og:site_name" content="技术成长的三两事">
-<meta property="og:description" content="[TOC] 前言：项目中总会有新的知识点出现，所以本篇笔记当做字典来用，方便查询知识点">
+<meta property="og:description" content="前言：项目中总会有新的知识点出现，所以本篇笔记当做字典来用，方便查询知识点 概览：1.杂七杂八外部库1.1 python中最假的库：Faker（伪造数据生成器）​    随机生成地址、姓名、银行卡号等等">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-26T11:49:18.239Z">
+<meta property="og:updated_time" content="2019-05-26T12:08:23.122Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="温故知新">
-<meta name="twitter:description" content="[TOC] 前言：项目中总会有新的知识点出现，所以本篇笔记当做字典来用，方便查询知识点">
+<meta name="twitter:description" content="前言：项目中总会有新的知识点出现，所以本篇笔记当做字典来用，方便查询知识点 概览：1.杂七杂八外部库1.1 python中最假的库：Faker（伪造数据生成器）​    随机生成地址、姓名、银行卡号等等">
   
     <link rel="alternative" href="/atom.xml" title="技术成长的三两事" type="application/atom+xml">
   
@@ -161,13 +161,39 @@
         
       </header>
     
+    <!-- 目录内容 -->
+
+  <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+        <span class="btn-bg"></span>
+        <span class="btn-text">文章导航</span>
+        </p>
+  <div id="toc-article" class="toc-article">
+      <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+      <strong class="toc-title">文章目录</strong>
+         <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">概览：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.</span> <span class="toc-text">1.杂七杂八外部库</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1 python中最假的库：Faker（伪造数据生成器）</span></a></li></ol></li></ol></li></ol>
+       </div>
+ <script type="text/javascript">
+  function showToc(){
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style","display:block");
+      show_toc_btn.setAttribute("style","display:none");
+      };
+  function showBtn(){
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style","display:none");
+      show_toc_btn.setAttribute("style","display:block");
+      };
+ </script>
+    
+<!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <p>[TOC]</p>
-<p>前言：项目中总会有新的知识点出现，所以本篇笔记当做字典来用，方便查询知识点</p>
+        <p>前言：项目中总会有新的知识点出现，所以本篇笔记当做字典来用，方便查询知识点</p>
+<h3><span id="概览">概览：</span></h3><h4><span id="1杂七杂八外部库">1.杂七杂八外部库</span></h4><h5><span id="11-python中最假的库faker伪造数据生成器">1.1 python中最假的库：Faker（伪造数据生成器）</span></h5><p>​    随机生成地址、姓名、银行卡号等等</p>
 <a id="more"></a>
 
-<h3><span id="概览">概览：</span></h3><h4><span id="1杂七杂八外部库">1.杂七杂八外部库</span></h4><h5><span id="11-python中最假的库faker伪造数据生成器">1.1 python中最假的库：Faker（伪造数据生成器）</span></h5><p>​    随机生成地址、姓名、银行卡号等等</p>
 <p><a href="https://faker.readthedocs.io/en/master/" target="_blank" rel="noopener">官方文档</a></p>
 <p><a href="https://www.hjqjk.com/2017/Python-moudle-Faker.html" target="_blank" rel="noopener">中文参考</a></p>
 
@@ -305,6 +331,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">概览：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.</span> <span class="toc-text">1.杂七杂八外部库</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1 python中最假的库：Faker（伪造数据生成器）</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -423,10 +462,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">定时任务</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">服务器</a>
               </li>
              
@@ -440,6 +475,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">nginx</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">定时任务</a>
               </li>
              
               <li class="article-tag-list-item">
