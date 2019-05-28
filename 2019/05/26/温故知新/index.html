@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="技术成长的三两事">
 <meta property="og:description" content="前言：项目中总会有新的知识点出现，所以本篇笔记当做字典来用，方便查询知识点 概览：1.杂七杂八外部库1.1 python中最假的库：Faker（伪造数据生成器）​    随机生成地址、姓名、银行卡号等等">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-26T12:15:13.974Z">
+<meta property="og:updated_time" content="2019-05-28T12:14:28.234Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="温故知新">
 <meta name="twitter:description" content="前言：项目中总会有新的知识点出现，所以本篇笔记当做字典来用，方便查询知识点 概览：1.杂七杂八外部库1.1 python中最假的库：Faker（伪造数据生成器）​    随机生成地址、姓名、银行卡号等等">
@@ -172,6 +172,10 @@
 
 <p><a href="https://faker.readthedocs.io/en/master/" target="_blank" rel="noopener">官方文档</a></p>
 <p><a href="https://www.hjqjk.com/2017/Python-moudle-Faker.html" target="_blank" rel="noopener">中文参考</a></p>
+<h4><span id="2web武功秘籍">2.web武功秘籍</span></h4><h5><span id="21-用户密码加密">2.1 用户密码加密</span></h5><p>在flask中有内置的加密方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> werkzeug.security <span class="keyword">import</span> generate_password_hash, check_password_hash</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span><span class="params">(db.Model, UserMixin)</span>:</span></span><br><span class="line">    id = db.Column(db.Integer, primary_key=<span class="literal">True</span>)</span><br><span class="line">    username = db.Column(db.String(<span class="number">20</span>), unique=<span class="literal">True</span>, index=<span class="literal">True</span>)</span><br><span class="line">    password_hash = db.Column(db.String(<span class="number">128</span>))</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 将密码加密</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">set_password</span><span class="params">(self, password)</span>:</span></span><br><span class="line">        self.password_hash = generate_password_hash(password)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 加密后方式验证密码</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">validate_password</span><span class="params">(self, password)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> check_password_hash(self.password_hash, password)</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.jianshu.com/p/4ba20afacce2" target="_blank" rel="noopener">参考：另外几种常见的加密方式</a></p>
 
       
 
@@ -413,7 +417,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">cx_oracle</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -429,11 +437,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color5">定时任务</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">cx_oracle</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -450,14 +462,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">虚拟环境</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">定时任务</a>
               </li>
             
             <div class="clearfix"></div>
