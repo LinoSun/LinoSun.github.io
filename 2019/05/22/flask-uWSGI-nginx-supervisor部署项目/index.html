@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
@@ -17,7 +17,7 @@
 <meta property="og:description" content="flask项目部署环境：centos7 工具：uWSGI,  nginx, supervisor 前提：在服务器上安装虚拟环境不再叙述，以下所有操作都是在一个环境中运行的（虚拟环境没有权限区别），可以选择虚拟环境或者真实环境，在选择本机环境时要注意python以及pip的版本 1.安装uWSGI1pip install uswgi  配置，在项目目录下新建config.ini，在config.in">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://prsas2xjq.bkt.clouddn.com/%E6%B5%81%E7%A8%8B%E5%9B%BE.png">
-<meta property="og:updated_time" content="2019-05-22T15:02:35.740Z">
+<meta property="og:updated_time" content="2019-05-22T15:02:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="flask+uWSGI+nginx+supervisor部署项目">
 <meta name="twitter:description" content="flask项目部署环境：centos7 工具：uWSGI,  nginx, supervisor 前提：在服务器上安装虚拟环境不再叙述，以下所有操作都是在一个环境中运行的（虚拟环境没有权限区别），可以选择虚拟环境或者真实环境，在选择本机环境时要注意python以及pip的版本 1.安装uWSGI1pip install uswgi  配置，在项目目录下新建config.ini，在config.in">
@@ -454,6 +454,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">服务器</a>
               </li>
              
@@ -466,15 +470,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">cx_oracle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">定时任务</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -490,10 +494,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">定时任务</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Mac</a>
               </li>
              
@@ -506,7 +506,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
+            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:
