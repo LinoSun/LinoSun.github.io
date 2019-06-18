@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://LinoSun.github.io">
   <title>pg存储过程速查表 | 技术成长的三两事</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="存储过程的好处：存储过程是一组予编译的SQL语句  允许模块化程序设计，就是说只需要创建一次过程，以后在程序中就可以调用该过程任意次。 允许更快执行，如果某操作需要执行大量SQL语句或重复执行，存储过程比SQL语句执行的要快。 减少网络流量，例如一个需要数百行的SQL代码的操作有一条执行语句完成，不需要在网络中发送数百行代码。 更好的安全机制，对于没有权限执行存储过程的用户，也可授权他们执行存储过">
+  <meta name="description" content="存储过程的好处：存储过程是一组予编译的SQL语句  允许模块化程序设计，就是说只需要创建一次过程，以后在程序中就可以调用该过程任意次。  允许更快执行，如果某操作需要执行大量SQL语句或重复执行，存储过程比SQL语句执行的要快。  减少网络流量，例如一个需要数百行的SQL代码的操作有一条执行语句完成，不需要在网络中发送数百行代码。  更好的安全机制，对于没有权限执行存储过程的用户，也可授权他们执行">
 <meta name="keywords" content="PostgreSQL,数据库">
 <meta property="og:type" content="article">
 <meta property="og:title" content="pg存储过程速查表">
 <meta property="og:url" content="https://LinoSun.github.io/2019/06/18/pg存储过程速查表/index.html">
 <meta property="og:site_name" content="技术成长的三两事">
-<meta property="og:description" content="存储过程的好处：存储过程是一组予编译的SQL语句  允许模块化程序设计，就是说只需要创建一次过程，以后在程序中就可以调用该过程任意次。 允许更快执行，如果某操作需要执行大量SQL语句或重复执行，存储过程比SQL语句执行的要快。 减少网络流量，例如一个需要数百行的SQL代码的操作有一条执行语句完成，不需要在网络中发送数百行代码。 更好的安全机制，对于没有权限执行存储过程的用户，也可授权他们执行存储过">
+<meta property="og:description" content="存储过程的好处：存储过程是一组予编译的SQL语句  允许模块化程序设计，就是说只需要创建一次过程，以后在程序中就可以调用该过程任意次。  允许更快执行，如果某操作需要执行大量SQL语句或重复执行，存储过程比SQL语句执行的要快。  减少网络流量，例如一个需要数百行的SQL代码的操作有一条执行语句完成，不需要在网络中发送数百行代码。  更好的安全机制，对于没有权限执行存储过程的用户，也可授权他们执行">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-18T09:25:57.537Z">
+<meta property="og:updated_time" content="2019-06-18T09:29:35.801Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pg存储过程速查表">
-<meta name="twitter:description" content="存储过程的好处：存储过程是一组予编译的SQL语句  允许模块化程序设计，就是说只需要创建一次过程，以后在程序中就可以调用该过程任意次。 允许更快执行，如果某操作需要执行大量SQL语句或重复执行，存储过程比SQL语句执行的要快。 减少网络流量，例如一个需要数百行的SQL代码的操作有一条执行语句完成，不需要在网络中发送数百行代码。 更好的安全机制，对于没有权限执行存储过程的用户，也可授权他们执行存储过">
+<meta name="twitter:description" content="存储过程的好处：存储过程是一组予编译的SQL语句  允许模块化程序设计，就是说只需要创建一次过程，以后在程序中就可以调用该过程任意次。  允许更快执行，如果某操作需要执行大量SQL语句或重复执行，存储过程比SQL语句执行的要快。  减少网络流量，例如一个需要数百行的SQL代码的操作有一条执行语句完成，不需要在网络中发送数百行代码。  更好的安全机制，对于没有权限执行存储过程的用户，也可授权他们执行">
   
     <link rel="alternative" href="/atom.xml" title="技术成长的三两事" type="application/atom+xml">
   
@@ -168,10 +168,16 @@
       
         <h3><span id="存储过程的好处">存储过程的好处：</span></h3><p>存储过程是一组予编译的<a href="https://www.baidu.com/s?wd=SQL语句&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">SQL语句</a></p>
 <ol>
-<li>允许<a href="https://www.baidu.com/s?wd=模块化程序设计&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">模块化程序设计</a>，就是说只需要创建一次过程，以后在程序中就可以调用该过程任意次。</li>
-<li>允许更快执行，如果某操作需要执行大量<a href="https://www.baidu.com/s?wd=SQL语句&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">SQL语句</a>或重复执行，存储过程比SQL语句执行的要快。</li>
-<li>减少网络流量，例如一个需要数百行的SQL代码的操作有一条执行语句完成，不需要在网络中发送数百行代码。</li>
-<li>更好的安全机制，对于没有权限执行存储过程的用户，也可授权他们执行存储过程。</li>
+<li><p>允许<a href="https://www.baidu.com/s?wd=模块化程序设计&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">模块化程序设计</a>，就是说只需要创建一次过程，以后在程序中就可以调用该过程任意次。</p>
+</li>
+<li><p>允许更快执行，如果某操作需要执行大量<a href="https://www.baidu.com/s?wd=SQL语句&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">SQL语句</a>或重复执行，存储过程比SQL语句执行的要快。</p>
+</li>
+<li><p>减少网络流量，例如一个需要数百行的SQL代码的操作有一条执行语句完成，不需要在网络中发送数百行代码。</p>
+</li>
+<li><p>更好的安全机制，对于没有权限执行存储过程的用户，也可授权他们执行存储过程。</p>
+<a id="more"></a>
+
+</li>
 </ol>
 <h3><span id="存储过程代码块">存储过程代码块</span></h3><p><a href="https://blog.csdn.net/rachel_luo/article/details/8073458" target="_blank" rel="noopener">参考</a></p>
 
