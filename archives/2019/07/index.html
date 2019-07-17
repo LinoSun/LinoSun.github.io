@@ -6,22 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://LinoSun.github.io">
-  <title>linux定时任务 | 技术成长的三两事</title>
+  <title>Archives: 2019/7 | 技术成长的三两事</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="linux定时任务执行python脚本失败原因环境：centos7 python3 定时任务详解crontab 命令-u ：只有 root 才有权限执行这个任务，也就是帮其他使用者创建/移除 crontab 定时任务 -e ：编辑 crontab 的内容 -l  ：显示 crontab 的内容 -r ：移除所有 crontab 的内容，若仅要移除某一项，请用 -e 编辑 时间格式：分钟">
-<meta name="keywords" content="linux,定时任务">
-<meta property="og:type" content="article">
-<meta property="og:title" content="linux定时任务">
-<meta property="og:url" content="https://LinoSun.github.io/2019/05/24/linux定时任务/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="技术成长的三两事">
+<meta property="og:url" content="https://LinoSun.github.io/archives/2019/07/index.html">
 <meta property="og:site_name" content="技术成长的三两事">
-<meta property="og:description" content="linux定时任务执行python脚本失败原因环境：centos7 python3 定时任务详解crontab 命令-u ：只有 root 才有权限执行这个任务，也就是帮其他使用者创建/移除 crontab 定时任务 -e ：编辑 crontab 的内容 -l  ：显示 crontab 的内容 -r ：移除所有 crontab 的内容，若仅要移除某一项，请用 -e 编辑 时间格式：分钟">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://prsas2xjq.bkt.clouddn.com/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1.png">
-<meta property="og:updated_time" content="2019-05-29T16:03:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="linux定时任务">
-<meta name="twitter:description" content="linux定时任务执行python脚本失败原因环境：centos7 python3 定时任务详解crontab 命令-u ：只有 root 才有权限执行这个任务，也就是帮其他使用者创建/移除 crontab 定时任务 -e ：编辑 crontab 的内容 -l  ：显示 crontab 的内容 -r ：移除所有 crontab 的内容，若仅要移除某一项，请用 -e 编辑 时间格式：分钟">
-<meta name="twitter:image" content="http://prsas2xjq.bkt.clouddn.com/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1.png">
+<meta name="twitter:title" content="技术成长的三两事">
   
     <link rel="alternative" href="/atom.xml" title="技术成长的三两事" type="application/atom+xml">
   
@@ -145,209 +138,64 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-linux定时任务" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      linux定时任务
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/07/17/无需下载直接访问ftp服务器上文件/" class="archive-article-date">
+  	<time datetime="2019-07-17T10:05:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-17</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/07/17/无需下载直接访问ftp服务器上文件/">无需下载直接访问ftp服务器上文件</a>
     </h1>
   
 
-        
-        <a href="/2019/05/24/linux定时任务/" class="archive-article-date">
-  	<time datetime="2019-05-24T02:35:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-24</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-
-<!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2><span id="linux定时任务执行python脚本失败原因">linux定时任务执行python脚本失败原因</span></h2><p>环境：centos7 python3</p>
-<h3><span id="定时任务详解">定时任务详解</span></h3><h5><span id="crontab-命令">crontab 命令</span></h5><p>-u ：只有 root 才有权限执行这个任务，也就是帮其他使用者创建/移除 crontab 定时任务</p>
-<p>-e ：编辑 crontab 的内容</p>
-<p>-l  ：显示 crontab 的内容</p>
-<p>-r ：移除所有 crontab 的内容，若仅要移除某一项，请用 -e 编辑</p>
-<p>时间格式：分钟         小时         日期         月份        周           命令</p>
-<p>数字范围： 0-59        0-23        1-31        1-12        0-7         echo “hello” &gt;&gt; abc.log</p>
-<h5><span id="特殊字符的含义"><strong>特殊字符的含义</strong></span></h5><a id="more"></a>
-
-<p>*(星号)        代表任何时刻都接受。</p>
-<p>,(逗号)         代表分隔时段的意思。</p>
-<p>-(减号)        代表一段时间范围内。</p>
-<p>/n(斜线)      那个 n 代表数字，每隔 n 单位间隔。<br><a href="https://blog.csdn.net/xiangxianghehe/article/details/78149094" target="_blank" rel="noopener">参考</a></p>
-<h3><span id="定时任务执行python脚本不执行原因">定时任务执行python脚本不执行原因：</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">30 8 * * * python3 /home/lino/xxx.py</span><br></pre></td></tr></table></figure>
-
-<p>单独执行定时任务时候没有问题，单独执行python脚本没有问题，此定时任务不执行原因是因为python路径要写绝对路径<br>首先在linux上执行命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">whereis python3</span><br></pre></td></tr></table></figure>
-
-<p><img src="http://prsas2xjq.bkt.clouddn.com/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1.png" alt="查找python3绝对路径"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">30 8 * * * /usr/local/bin/python3 /home/lino/xxx.py</span><br></pre></td></tr></table></figure>
-
-<p>这样便解决了不执行原因</p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>给我家小可爱买哈根达斯<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/wechat.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">H5</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">定时任务</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ftp</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://LinoSun.github.io/2019/05/24/linux定时任务/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/05/25/漫步岁月洪流/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          漫步岁月洪流
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/05/22/flask-uWSGI-nginx-supervisor部署项目/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">flask+uWSGI+nginx+supervisor部署项目</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -370,8 +218,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
